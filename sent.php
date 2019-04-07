@@ -4,9 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="古材を活用した内装、花と緑に囲まれたテラス。地元の食材を使った手作りのタルトやキャッシュ。挽きたてのコーヒーで豊かなひとときを。">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>cafe</title>
+        <title>お問い合わせ　| KUJIRA Cafe</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -27,14 +26,23 @@
             </header>
             <!-- ヘッダー ここまで -->
             <!-- メイン -->
-            <div class="keyvisual">
-                <img src="images/keyvisual.jpg" alt="">
-            </div>
             <main>
-                <h2 id="news">News</h2>
-                <p class="news-item">4月29日（土）は、九寺楽町の春祭りに出店するため、お店は休業させていたただきます。春祭りでタルトやキッシュ、コーヒーも販売するので、ぜひお越しください。</p>
-                <p class="news-item">3月20日（月・祝）は、18時からアコースティックギターデュオ<a href="https://www.sbcr.jp"
-                        target="_blank">「PICNIC」</a>のライブを開催します。投げ銭方式です。お楽しみに！</p>
+                <h2>お問い合わせ</h2>
+                <div class="form-item">■ 名前</div>
+                    <?php echo $_POST['kind']; ?>
+
+                    <div class="form-item">■ 年齢</div>
+                    <?php echo $_POST['first']; ?>
+
+                    <div class="form-item">■ お問い合わせの種類</div>
+                    
+                    <?php echo $_POST['how'];?>
+                    
+                    <div class="form-item">■ 内容</div>
+                    <?php echo $_POST['subject']; ?>
+
+                    <div class="form-item">■ 内容</div>
+                    <?php echo $_POST['message']; ?>
             </main>
             <!-- メインここまで -->
             <!-- フッター -->
