@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>お問い合わせ　| KUJIRA Cafe</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/sent.css">
     </head>
 
     <body>
@@ -27,22 +27,25 @@
             <!-- ヘッダー ここまで -->
             <!-- メイン -->
             <main>
-                <h2>お問い合わせ</h2>
-                <div class="form-item">■ 名前</div>
+                <div class="contact-form">
+                <h2 class="title">お問い合わせの確認</h2>
+                <div class="form-item">■ お問い合わせの種類</div>
                     <?php echo $_POST['kind']; ?>
 
-                    <div class="form-item">■ 年齢</div>
+                    <div class="form-item">■ KUZIRA Cafeにご来店いただいたことはありますか。</div>
                     <?php echo $_POST['first']; ?>
 
-                    <div class="form-item">■ お問い合わせの種類</div>
+                    <div class="form-item">■ 当カフェをお知りになったきっかけは？</div>
                     
                     <?php echo $_POST['how'];?>
                     
-                    <div class="form-item">■ 内容</div>
+                    <div class="form-item">■ お問い合わせの件名</div>
                     <?php echo $_POST['subject']; ?>
 
-                    <div class="form-item">■ 内容</div>
+                    <div class="form-item">■ お問い合わせの具体的な内容</div>
                     <?php echo $_POST['message']; ?>
+                    
+                </div>
             </main>
             <!-- メインここまで -->
             <!-- フッター -->

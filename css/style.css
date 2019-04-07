@@ -52,33 +52,45 @@ img {
     line-height: 0;
     text-align: center;
 }
-.nav li {
-    list-style-type: none;
-    padding-right: 30px;
-}
-.nav ul {
-    
-    margin: 0 0 0 0;
-    padding:20px 10px 30px 20px;
-    background-image: url(../images/menu-bg.png);
-    background-repeat: repeat-x;
-}
-.nav a:link {
+nav a:link {
     color: #3c454d;
     text-decoration: none;
 }
-.nav a:visited {
+nav a:visited {
     color: #3c454d;
     text-decoration: none;
 }
-.nav a:hover {
+nav a:hover {
     color: #7b8dac;
-    text-decoration: none;
+    text-decoration: underline;
 }
-.nav a:active {
+nav a:active {
     color: #5a9bc0;
     text-decoration: none;
 }
+nav ul {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 0%;
+	width: 100%;
+	max-width: 960px; 
+}
+	nav ul li {
+		position: relative;
+		float: left;
+        width: 20%;
+	}
+		nav ul li a {
+	 		display: block;
+			padding: 17px 5%;
+			width: 100%;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+        }
+        nav li+ li {
+            border-left: 1px solid #aaa;
+          }
 /*すべてのページに適用　- フッター - */
 .footer{
     background-image: url(../images/footer-bg.png);
@@ -99,8 +111,9 @@ img {
 /* about.html */
 .shop-photo{
     float: left;
-    padding: 0 1em 1em 0;
+    margin-right: 10px;
 }
+
 .clear{
     clear: both;
 }
@@ -201,7 +214,7 @@ input [type="submit"]{
 
 /* about.html - 画像のパディングを調整 */
 .shop-photo{
-    padding-right: 0;
+    padding-right: 1px;
 }
 
 /* contact.html - フォーム */

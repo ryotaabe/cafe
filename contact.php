@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>お問い合わせ　| KUJIRA Cafe</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/sent.css">
     </head>
 
     <body>
@@ -27,38 +27,25 @@
             <!-- ヘッダー ここまで -->
             <!-- メイン -->
             <main>
-                <h2>お問い合わせ</h2>
-                <form method="post" action="sent.php">
-                    <div>
-                        <label for="kind">お問い合わせの種類</label><br>
-                        <select name="kind" id="kind">
-                            <option value="reservation">ご予約</option>
-                            <option value="event">イベントついて</option>
-                            <option value="contact">その他のお問い合わせ</option>
-                        </select>
-                    </div>
-                    <div>
-                        KUZIRA Cafeにご来店いただいたことはありますか。<br>
-                        <label><input type="radio" name="first" value="yes" checked>はい</label>
-                        <label><input type="radio" name="first" value="no">いいえ</label>
-                    </div>
-                    <div>
-                        当カフェをお知りになったきっかけは？<br>
-                        <label><input type="checkbox" name="how" value="friends">知り合いの紹介</label>
-                        <label><input type="checkbox" name="how" value="magazine">雑誌・webサイトで見て</label>
-                    </div>
-                    <div>
-                        <label>お問い合わせの件名<br>
-                            <input type="text" name="subject" placeholder="お問い合わせ"></label>
-                    </div>
-                    <div>
-                        <label> お問い合わせの具体的な内容<br>
-                            <textarea name="message"></textarea></label>
-                    </div>
-                    <div>
-                        <input type="submit" name="submit" value="送信">
-                    </div>
-                </form>
+                <div class="contact-form">
+                <h2 class="title">お問い合わせの確認</h2>
+                <div class="form-item">■ お問い合わせの種類</div>
+                    <?php echo $_POST['kind']; ?>
+
+                    <div class="form-item">■ KUZIRA Cafeにご来店いただいたことはありますか。</div>
+                    <?php echo $_POST['first']; ?>
+
+                    <div class="form-item">■ 当カフェをお知りになったきっかけは？</div>
+                    
+                    <?php echo $_POST['how'];?>
+                    
+                    <div class="form-item">■ お問い合わせの件名</div>
+                    <?php echo $_POST['subject']; ?>
+
+                    <div class="form-item">■ お問い合わせの具体的な内容</div>
+                    <?php echo $_POST['message']; ?>
+                    
+                </div>
             </main>
             <!-- メインここまで -->
             <!-- フッター -->
